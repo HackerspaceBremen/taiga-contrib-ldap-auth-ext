@@ -94,8 +94,7 @@ def register_or_update(username: str, email: str, full_name: str, password: str)
     if SLUGIFY:
         username_unique = SLUGIFY(username)        
 
-    if EMAIL_MAP:
-        email = "{}@hackerspace-bremen.de".format(username_unique)
+    email = "{}@hackerspace-bremen.de".format(username_unique)
 
     if NAME_MAP:
         full_name = NAME_MAP(full_name)
